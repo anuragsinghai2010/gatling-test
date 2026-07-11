@@ -1,0 +1,18 @@
+# Gradle generated files
+.gradle/
+build/
+
+# IDE files
+.idea
+*.iml
+.vscode
+
+# Git files
+.git
+.gitignore
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
