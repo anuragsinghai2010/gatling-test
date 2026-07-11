@@ -1,0 +1,28 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: gatling-test-cron
+spec:
+  schedule: "*/5 * * * *"
+
+  jobTemplate:
+    spec:
+      backoffLimit: 0
+      template:
+        spec:
+          restartPolicy: Never
+
+          containers:
+            - name: gatling
+              image: anuragsinghai2010/ent-gatling-test:latest
+              imagePullPolicy: Always
+
+              volumeMounts:
+                - name: gatling-reports
+                  mountPath: /app/build/reports
+
+          volumes:
+            - name: gatling-reports
+              hostPath:
+                path: /home/docker/gatling-reports
+                type: DirectoryOrCreate

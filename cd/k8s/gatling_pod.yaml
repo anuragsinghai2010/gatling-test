@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gatling-test
+spec:
+  containers:
+  - name: gatling-test
+    image: anuragsinghai2010/ent-gatling-test:latest
+    ports:
+    - containerPort: 80
+
