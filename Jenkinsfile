@@ -139,7 +139,7 @@ pipeline {
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
-                    reportDir: 'build/reports/gatling',
+                    reportDir: 'build/reports/gatling/*/',
                     reportFiles: 'index.html',
                     reportName: 'Gatling Report'
                 ])
