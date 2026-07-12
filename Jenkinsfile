@@ -10,7 +10,7 @@ pipeline {
 
         IMAGE_NAME="anuragsinghai2010/ent-gatling-test"
 
-        IMAGE_TAG="4.0.0"
+        IMAGE_TAG="5.0.0"
 
         IMAGE_TAG1="latest"
     }
@@ -139,7 +139,7 @@ pipeline {
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
-                    reportDir: 'build/reports/gatling/*/',
+                    reportDir: 'build/reports/gatling',
                     reportFiles: 'index.html',
                     reportName: 'Gatling Report'
                 ])
