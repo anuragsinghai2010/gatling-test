@@ -20,5 +20,5 @@ spec:
       volumes:
         - name: gatling-reports
           hostPath:
-            path: /Users/anuragjain/Kubernetes-learnings/gatling-reports
+            path: /home/docker/gatling-reports
             type: DirectoryOrCreate 
